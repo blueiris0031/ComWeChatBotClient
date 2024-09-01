@@ -246,7 +246,7 @@ class Driver:
                 headers=tuple(setup.headers.items()),
                 timeout=setup.timeout,
             )
-            return Response(
+            return BaseResponse(
                 response.status_code,
                 headers=response.headers.multi_items(),
                 content=response.content,
